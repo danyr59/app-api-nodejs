@@ -1,14 +1,32 @@
-const pathInitial =  (req, res) =>{
+const getProducts =  (req, res) =>{
     res.json({msg: "hola mundo en express"})
 }
 
-const pathInitialPost = (req,res) => {
+const getProduct = (req,res) => {
     console.log(req.body)
-    res.json({msg: "response of type post"})
+    res.json({msg: "get"})
+}
+const createProduct = (req,res) => {
+    console.log(req.body)
+    res.json({msg: "post"})
 }
 
+const updateProduct = (req,res) => {
+    console.log(req.body)
+    res.json({msg: "post"})
+}
+
+const deleteProduct = (req,res) => {
+    console.log(req.body)
+    res.json({msg: "post"})
+}
+
+
 export {
-    pathInitial,
-    pathInitialPost
+    getProducts,
+    getProduct,
+    createProduct,
+    updateProduct,
+    deleteProduct
 
 }
