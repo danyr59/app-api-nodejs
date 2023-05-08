@@ -17,7 +17,14 @@ const getProduct = (req,res) => {
 }
 const createProduct = (req,res) => {
     const {id, name} = req.body
+    //buscar si ese id ya existe
+    if(productService.findById(id) != undefined){
+        res.status(404).send(`id: ${id} ya existe`)
+        return;
+    }
+
     const p = new Product(id, name)
+    
     productService.save(p)
     res.status(200).json(p)
 }
