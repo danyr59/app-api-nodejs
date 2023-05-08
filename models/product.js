@@ -1,21 +1,21 @@
 class Product{
     constructor(id, name) {
-        this.id = id
-        this.name = name        
+        this.id_ = id
+        this.name_ = name        
         
     }
 
     get id(){
-        return this.id
+        return this.id_
     }
     get name(){
-        return this.name
+        return this.name_
     }
     set id(id){
-        this.id = id
+        this.id_ = id
     }
     set name(name){
-        this.name = name
+        this.name_ = name
     }
 }
 

@@ -10,10 +10,16 @@ class ProductService {
     //actualiza el producto
     update(product){
         const id = product.id
-        this.products.map(product => product.id )
+        console.log(this.products.map(product => product.id == id ))
     }
 
     //returna una lista
     listAll(){
-        
+        return this.products
     }
+        
+}
+
+export {
+    ProductService
+}
