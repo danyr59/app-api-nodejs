@@ -5,6 +5,7 @@ class ProductService {
     }
     //guarda el producto
     save(product){
+        
         this.products.push(product)
         return product
     }
